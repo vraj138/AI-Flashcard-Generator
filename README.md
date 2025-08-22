@@ -15,7 +15,7 @@ It also integrates **Text-to-Speech (TTS)** to create **audio flashcards**, maki
 ---
 
 ## Project Structure  
-```
+```graphql
 ai-flashcard-generator/
 │── README.md                       # Project overview, setup, usage
 │── requirements.txt                # Dependencies
