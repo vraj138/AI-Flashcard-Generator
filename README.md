@@ -17,25 +17,26 @@ It also integrates **Text-to-Speech (TTS)** to create **audio flashcards**, maki
 ## Project Structure  
 ```
 ai-flashcard-generator/
-│── README.md                # Project overview, setup, usage
-│── requirements.txt         # Dependencies
+│── README.md                       # Project overview, setup, usage
+│── requirements.txt                # Dependencies
+│── .gitignore                      # Ignore venv, cache, etc.
 │
-├── src/                     # Source code
-│   ├── flashcard_generator.py   # Core NLP logic with OpenAI API
-│   ├── tts_converter.py         # Text-to-Speech module
-│   ├── utils.py                 # Helper functions
-│   └── app.py                   # Streamlit web app
+├── src/                            # Source code
+│   ├── flashcard_generator.py      # Core NLP logic with OpenAI API
+│   ├── tts_converter.py            # Text-to-Speech module
+│   ├── utils.py                    # Helper functions
+│   └── app.py                      # Streamlit web app
 │
-├── data/                    # Input & output data
-│   ├── sample_text.txt          # Example input
-│   ├── flashcards.json          # Output (JSON)
-│   └── flashcards.csv           # Output (CSV)
+├── data/                           # Input & output data
+│   ├── sample_text.txt             # Example input
+│   ├── flashcards.json             # Output (JSON)
+│   └── flashcards.csv              # Output (CSV)
 │
-├── audio/                   # Audio flashcards
+├── audio/                          # Audio flashcards
 │   ├── flashcard1.mp3
 │   └── flashcard2.mp3
 │
-└── notebooks/               # Experimentation
+└── notebooks/                      # Experimentation
     └── demo.ipynb
 ```
 ---
