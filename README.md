@@ -1,11 +1,11 @@
-# 📚 AI Flashcard Generator  
+# AI Flashcard Generator  
 
 An AI-powered tool that transforms raw text into **question–answer flashcards** using **NLP techniques** like summarization, rephrasing, and question generation.  
 It also integrates **Text-to-Speech (TTS)** to create **audio flashcards**, making learning more **accessible, multimodal, and hands-free**.  
 
 ---
 
-## ✨ Features  
+## Features  
 - **Automatic Flashcard Creation** – Convert raw text into structured Q&A pairs.  
 - **NLP-Powered** – Uses OpenAI API for summarization, rephrasing, and question generation.  
 - **Text-to-Speech (TTS)** – Generates audio flashcards for auditory learners.  
@@ -14,7 +14,8 @@ It also integrates **Text-to-Speech (TTS)** to create **audio flashcards**, maki
 
 ---
 
-## 🏗️ Project Structure  
+## Project Structure  
+```
 ai-flashcard-generator/
 │── README.md                # Project overview, setup, usage
 │── requirements.txt         # Dependencies
@@ -36,7 +37,7 @@ ai-flashcard-generator/
 │
 └── notebooks/               # Experimentation
     └── demo.ipynb
-
+```
 ---
 
 ## Installation  
@@ -65,7 +66,7 @@ pip install -r requirements.txt
 export OPENAI_API_KEY="your_api_key_here"   # Linux/Mac
 setx OPENAI_API_KEY "your_api_key_here"     # Windows
 ```
-
+---
 ## Usage
 
 1. Generate Flashcards (CLI)
@@ -83,7 +84,7 @@ python src/tts_converter.py --input data/flashcards.json --output audio/
 ```bash
 streamlit run src/app.py
 ```
-
+---
 ## Example
 Input (sample_text.txt):
 
@@ -101,6 +102,8 @@ Generated Flashcard (JSON):
 
 Audio Output: 🎧 flashcard1.mp3
 
+---
+
 ## Future Improvements
 - Add speech-to-text so users can speak notes and auto-generate flashcards.
 - Integrate spaced repetition algorithm for smarter studying.
@@ -113,9 +116,13 @@ Audio Output: 🎧 flashcard1.mp3
 - **Frontend/UI:** Streamlit  
 - **Data Handling:** Pandas, NumPy  
 
+---
+
 ## Contributing
 Contributions, issues, and feature requests are welcome!
 Feel free to fork this repo and submit a PR.
+
+---
 
 ## License
 This project is licensed under the MIT License.
