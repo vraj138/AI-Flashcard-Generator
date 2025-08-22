@@ -39,95 +39,85 @@ ai-flashcard-generator/
 
 ---
 
-## ⚡ Installation  
+## Installation  
 
 1. Clone the repository  
 ```bash
 git clone https://github.com/your-username/ai-flashcard-generator.git
 cd ai-flashcard-generator
 Create and activate a virtual environment
+```
 
-bash
-Copy
-Edit
+2. Create and activate a virtual environment
+```bash
 python -m venv venv
 source venv/bin/activate   # On Windows: venv\Scripts\activate
-Install dependencies
+```
 
-bash
-Copy
-Edit
+3. Install dependencies
+
+```bash
 pip install -r requirements.txt
-Set your OpenAI API key
+```
 
-bash
-Copy
-Edit
+4. Set your OpenAI API key
+```bash
 export OPENAI_API_KEY="your_api_key_here"   # Linux/Mac
 setx OPENAI_API_KEY "your_api_key_here"     # Windows
-🚀 Usage
+```
+
+## Usage
+
 1. Generate Flashcards (CLI)
-bash
-Copy
-Edit
+
+```bash
 python src/flashcard_generator.py --input data/sample_text.txt --output data/flashcards.json
+```
+
 2. Convert Flashcards to Audio
-bash
-Copy
-Edit
+```bash
 python src/tts_converter.py --input data/flashcards.json --output audio/
+```
+
 3. Run Web App (Optional with Streamlit)
-bash
-Copy
-Edit
+```bash
 streamlit run src/app.py
-📊 Example
+```
+
+## Example
 Input (sample_text.txt):
 
-csharp
-Copy
-Edit
+```csharp
 The mitochondria is the powerhouse of the cell. It generates ATP through cellular respiration.
+```
 Generated Flashcard (JSON):
 
-json
-Copy
-Edit
+```json
 {
   "question": "What is the powerhouse of the cell?",
   "answer": "Mitochondria"
 }
+```
+
 Audio Output: 🎧 flashcard1.mp3
 
-🔮 Future Improvements
-Add speech-to-text so users can speak notes and auto-generate flashcards.
+## Future Improvements
+- Add speech-to-text so users can speak notes and auto-generate flashcards.
+- Integrate spaced repetition algorithm for smarter studying.
+- Export flashcards to Anki or other learning platforms.
 
-Integrate spaced repetition algorithm for smarter studying.
+### Tech Stack
+- **Programming Language:** Python  
+- **AI/NLP:** OpenAI API  
+- **Text-to-Speech (TTS):** gTTS, pyttsx3  
+- **Frontend/UI:** Streamlit  
+- **Data Handling:** Pandas, NumPy  
 
-Export flashcards to Anki or other learning platforms.
-
-🛠️ Tech Stack
-Python
-
-OpenAI API (NLP)
-
-gTTS / pyttsx3 (TTS)
-
-Streamlit (UI)
-
-Pandas, NumPy
-
-🤝 Contributing
+## Contributing
 Contributions, issues, and feature requests are welcome!
 Feel free to fork this repo and submit a PR.
 
-📄 License
+## License
 This project is licensed under the MIT License.
-
-yaml
-Copy
-Edit
-
----
 
 
