@@ -2,6 +2,7 @@ from openai import OpenAI
 import json
 from dotenv import load_dotenv
 import os
+from tts_converter import text_to_speech
 
 load_dotenv()
 
@@ -31,7 +32,36 @@ def generate_flashcards(text, num_questions):
     except Exception:
         flashcards = [{"question": "Error parsing", "answer": response.choices[0].message.content}]
 
-    return flashcards
+    if isinstance(flashcards, dict):
+        flashcards = [flashcards]
+    elif isinstance(flashcards, str):
+        try:
+            flashcards = json.loads(flashcards)
+        except:
+            flashcards = [{"question": "Error parsing", "answer": flashcards}]
+
+    # Clean up flashcards
+    cleaned_flashcards = []
+    for card in flashcards:
+        if isinstance(card, dict) and "question" in card and "answer" in card:
+            cleaned_flashcards.append(card)
+        else:
+            cleaned_flashcards.append({
+                "question": "Error parsing",
+                "answer": str(card)
+            })
+        
+    for i, card in enumerate(cleaned_flashcards):
+        q_filename = f"flashcard_{i+1}_q.mp3"
+        a_filename = f"flashcard_{i+1}_a.mp3"
+
+        text_to_speech("Question: " + card["question"], q_filename)
+        text_to_speech("Answer: " + card["answer"], a_filename)
+        
+        os.system(f"afplay {q_filename}")
+        os.system(f"afplay {a_filename}")
+        
+    return cleaned_flashcards
 
 
 # Example
