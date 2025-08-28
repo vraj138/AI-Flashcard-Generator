@@ -25,12 +25,12 @@ num_questions = st.slider("Number of flashcards to generate:", 1, 10, 3)
 # Generate Button
 if st.button("Generate Flashcards"):
     if not text_input.strip():
-        st.warning("⚠️ Please provide some text input.")
+        st.warning("Please provide some text input.")
     else:
         with st.spinner("Generating flashcards..."):
             flashcards = generate_flashcards(text_input, num_questions=num_questions)
 
-        st.success(f"✅ Generated {len(flashcards)} flashcards!")
+        st.success(f"Generated {len(flashcards)} flashcards!")
 
         # Display flashcards
         for i, card in enumerate(flashcards):
