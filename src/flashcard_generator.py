@@ -83,8 +83,9 @@ def generate_flashcards(text, num_questions):
 
 
 # Example
-with open("data/sample_text.txt", "r", encoding="utf-8") as f:
-    text_input = f.read()
+if __name__ == "__main__":
+    with open("data/sample_text.txt", "r", encoding="utf-8") as f:
+        text_input = f.read()
 
-flashcards = generate_flashcards(text_input, num_questions=1)
-print(flashcards)
+    flashcards = generate_flashcards(text_input, num_questions=1)
+    print(flashcards)

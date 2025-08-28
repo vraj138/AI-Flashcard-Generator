@@ -10,6 +10,6 @@ def text_to_speech(text, filename="output.mp3"):
         tts.save(filename)
         print(f"Saved speech to {filename}")
         # Optional: play sound (macOS/Linux)
-        os.system(f"afplay {filename}" if os.name == "posix" else f"start {filename}")
+        # os.system(f"afplay {filename}" if os.name == "posix" else f"start {filename}")
     except Exception as e:
         print(f"Error in TTS: {e}")
